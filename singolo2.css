@@ -25,6 +25,10 @@
     width: 1020px;
     margin: 0 auto;
   }
+
+  main {
+    background-color: #f2f2f2;;
+  }
   
   a {
     text-decoration: none;
