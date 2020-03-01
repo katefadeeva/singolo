@@ -1,0 +1,182 @@
+
+@font-face{
+    font-family: "LatoBlack";
+    src: url("assets/Lato/Lato-Black.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+    }
+  
+  @font-face{
+    font-family: "LatoLight";
+    src: url("assets/Lato/Lato-Light.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+    }
+  
+  @font-face{
+    font-family: "Lato";
+    src: url("assets/Lato/Lato-Regular.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+    }
+  
+  body {
+    font-family: "Lato";
+    width: 1020px;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .content {
+    width: 1020px;
+    height: 6px;
+    background-color: #ffffff;
+    margin: 0;
+    border: 0;
+  }
+  
+  
+  .portfolio  {
+    width: 1020px;
+    height: 863px;
+    background-color: #2d303a;
+  }
+  
+  .portfolio_blok {
+    width: 940px;
+    margin: 0 auto;
+  
+  }
+  
+  .portfolio__name {
+    font-family: "LatoBlack";
+    font-size: 29px;
+    letter-spacing: 0.4px;
+    color: #666d89;
+    margin: 0;
+    padding-top: 61px;
+  }
+  
+  .portfolio__description {
+    font-family: "LatoLight";
+    width: 940px;
+    line-height: 29px;
+    color: #767e9e;
+    text-align: justify;
+    margin-top: 19px;
+    font-size: 18px;
+    margin-bottom: 9px;
+  }
+  
+  .tag {
+    border-radius: 5px;
+    background-color: #2d303a;
+    border: 1px solid #666d89;
+    font-size: 12px;
+    line-height: 18px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    margin-right: 6px;
+  }
+  
+  .tag:hover {
+    border: 1px solid #c5c5c5;
+    color: #c5c5c5;
+  }
+  
+  .tag-first {
+      border: 1px solid #c5c5c5;
+      color: #c5c5c5;
+  }
+  
+  .portfolio-images {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+  
+  }
+  .portfolio_image {
+      display: flex;
+      margin-right: 20px;
+      margin-top: 19px;
+  }
+  
+  .bottom-portfolio {
+      width: 1020px;
+      height: 6px;
+      background-color: #323746;
+      margin: 0;
+      border: 0;
+  }
+  
+  .about-us {
+      width: 940px;
+      height: 673px;
+      margin: 0 auto;
+  }
+    
+  .about-us_blok {
+      margin-top: 61px;
+    }
+    
+  .about-us__name {
+      font-family: "LatoBlack";
+      font-size: 29px;
+      letter-spacing: 0.4px;
+      color: #666d89;
+      margin: 0;
+  }
+    
+  .about-us__description {
+      font-family: "LatoLight";
+      width: 940px;
+      height: 57px;
+      line-height: 29px;
+      color: #767e9e;
+      text-align: justify;
+      margin-top: 19px;
+      font-size: 18px;
+  }
+    
+  .about-us__employee-name {
+      font-family: "LatoBlack";
+      font-size: 18px;
+      line-height: 18px;
+      color: #666d89;
+      text-align: left;  
+      margin-top: 13px;
+  }
+    
+  .about-us__employee-description {
+      font-family: "Lato";
+      width: 300px;
+      height: 53px;
+      font-size: 12px;
+      line-height: 21px;
+      color: #767e9e;
+      text-align: justify;
+      margin-top: -8px;
+  }
+    
+  .layout-3-column-about-us {
+      display: grid;
+      grid-template-columns: repeat(3,320px);
+      margin-top: 46px;
+  }
+    
+  .about-us__employee {
+      margin-right: 6px;
+    }
+  
+  .social-icons {
+        display: grid;
+        grid-template-columns: repeat(4,40px);
+    }
+  
+  .icon:hover {
+      opacity: 0.7;
+  }
+  
