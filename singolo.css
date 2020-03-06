@@ -393,3 +393,58 @@ main {
 .icon:hover {
     opacity: 0.7;
 }
+
+.contacts {
+  width: 1020px;
+  height: 648px;
+  background-color: #f06c64;
+  margin-top: -7px;
+}
+
+.contacts_blok {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.contacts__name {
+  font-family: "LatoBlack";
+  font-size: 29px;
+  letter-spacing: 0.4px;
+  color: #f0d8d9;
+  margin: 0;
+  padding-top: 61px;
+}
+
+.contacts__description {
+  font-family: "LatoLight";
+  width: 940px;
+  height: 57px;
+  line-height: 29px;
+  color: #f0d8d9;
+  text-align: justify;
+  margin-top: 19px;
+  font-size: 18px;
+}
+
+.form-element {
+  width: 619px;
+  border-radius: 5px;
+  background-color: #d6564f;
+  height: 38px;
+  border: 0;
+  margin-bottom: 14px;
+}
+
+.form-element::placeholder {
+  font-size: 12px;
+  line-height: 22px;
+  color: #f48c8f;
+  font-family: "Lato";
+  font-weight: 400;
+  padding-left: 13px;
+}
+
+.contact_form {
+  display: flex;
+  margin-top: 44px;
+}
