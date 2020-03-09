@@ -196,6 +196,7 @@ main {
   letter-spacing: 0.4px;
   color: #666d89;
   margin: 0;
+  text-overflow: ellipsis;
 }
 
 .our-services__description {
@@ -207,6 +208,7 @@ main {
   text-align: justify;
   margin-top: 19px;
   font-size: 18px;
+  text-overflow: ellipsis;
 }
 
 /* Advantages */
@@ -217,7 +219,7 @@ main {
   line-height: 18px;
   color: #666d89;
   text-align: left;
-  
+  text-overflow: ellipsis;
   margin: 0;
 }
 
@@ -230,6 +232,7 @@ main {
   color: #767e9e;
   text-align: justify;
   margin-top: 9px;
+  text-overflow: ellipsis;
 }
 
 .layout-3-column {
@@ -293,6 +296,7 @@ main {
   margin-top: 19px;
   font-size: 18px;
   margin-bottom: 9px;
+  text-overflow: ellipsis;
 }
 
 .tag {
@@ -354,6 +358,7 @@ main {
     letter-spacing: 0.4px;
     color: #666d89;
     margin: 0;
+    text-overflow: ellipsis;
 }
   
 .about-us__description {
@@ -365,6 +370,7 @@ main {
     text-align: justify;
     margin-top: 19px;
     font-size: 18px;
+    text-overflow: ellipsis;
 }
 
 /* Employee */
@@ -376,6 +382,7 @@ main {
     color: #666d89;
     text-align: left;  
     margin-top: 13px;
+    text-overflow: ellipsis;
 }
   
 .about-us__employee-description {
@@ -387,6 +394,7 @@ main {
     color: #767e9e;
     text-align: justify;
     margin-top: -8px;
+    text-overflow: ellipsis;
 }
   
 .layout-3-column-about-us {
@@ -442,6 +450,7 @@ main {
   text-align: justify;
   margin-top: 19px;
   font-size: 18px;
+  text-overflow: ellipsis;
 }
 
 /* Form */
@@ -515,6 +524,7 @@ textarea {
   color: #f0d8d9;
   text-align: justify;
   margin-top: -8px;
+  text-overflow: ellipsis;
 }
 
 .contact_link {
