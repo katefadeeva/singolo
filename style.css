@@ -233,6 +233,7 @@ main {
   text-align: justify;
   margin-top: 9px;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .layout-3-column {
@@ -383,6 +384,8 @@ main {
     text-align: left;  
     margin-top: 13px;
     text-overflow: ellipsis;
+    overflow: hidden;
+    height: 18px;
 }
   
 .about-us__employee-description {
