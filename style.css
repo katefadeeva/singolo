@@ -38,6 +38,8 @@ body {
   height: 89px;
   background-color: #2d303a;
   margin: 0;
+  position: fixed;
+  width: 1020px;
 }
 
 .navbar {
@@ -87,20 +89,24 @@ h1, li {
   height: 100%;
 }
 
-.navigation li {
+.navigation a {
   font-family: "Lato";
   font-size: 11px;
   line-height: 6px;
   font-weight: 500;
   color: #ffffff;
-  list-style-type: none;
+ 
 } 
 
-.navigation .link-first {
-    color: #f06c64;
+.navigation li {
+  list-style-type: none;
 }
 
-.navigation li:hover {
+.navigation a:hover {
+  color: #f06c64;
+}
+
+.navigation .item-link {
   color: #f06c64;
 }
 
@@ -112,12 +118,21 @@ h1, li {
   border: 0;
 }
 
+main {
+  margin-top: 83px;
+}
+
 /* Slider */
 
 .main-slider {
-  width: 1020px;
-  height: 595px;
-  background-color: #f06c64;
+  display: flex;
+  overflow: hidden;
+}
+
+.item {
+  flex-shrink: 0;
+  position: relative;
+  left: 0;
 }
 
 .bg-bottom {
@@ -128,8 +143,10 @@ h1, li {
   border: 0;
 }
 
-.wrapper {
-  position: relative;
+.item:first-child {
+  width: 1020px;
+  height: 595px;
+  background-color: #f06c64;
 }
 
 .iphone__vertical {
@@ -142,6 +159,11 @@ h1, li {
   position: absolute;
   top: 69px;
   right: 80px;
+}
+
+.item:last-child {
+  width: 1020px;
+  height: 595px;
 }
 
 .left__arrow {
