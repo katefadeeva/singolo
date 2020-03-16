@@ -155,6 +155,26 @@ main {
   left: 110px;
 }
 
+.screen .vertical {
+  width: 188px;
+  height: 333px;
+  background: #161616;
+  position: absolute;
+  top: 118px;
+  left: 126px;
+  visibility: hidden;
+}
+
+.screen .horizontal {
+  width: 333px;
+  height: 188px;
+  background: #161616;
+  position: absolute;
+  top: 188px;
+  left: 485px;
+  visibility: hidden;
+}
+
 .iphone__horizontal {
   position: absolute;
   top: 69px;
@@ -334,10 +354,6 @@ main {
   margin-right: 6px;
 }
 
-.tag:hover {
-  border: 1px solid #c5c5c5;
-  color: #c5c5c5;
-}
 
 .tag-first {
     border: 1px solid #c5c5c5;
@@ -349,6 +365,13 @@ main {
   grid-template-columns: repeat(4,auto);
 
 }
+
+.portfolio-images .border {
+  border: #F06C64 5px solid;
+  margin-top: 5px !important;
+  margin-right: 10px !important;
+}
+
 .portfolio_image {
     display: flex;
     margin-right: 20px;
