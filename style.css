@@ -127,6 +127,7 @@ main {
 .main-slider {
   display: flex;
   overflow: hidden;
+  position: relative;
 }
 
 .item-container {
@@ -143,9 +144,9 @@ main {
 
 .bg-bottom {
   width: 1020px;
-  height: 5px;
+  height: 6px;
   background-color: #ea676b;
-  margin: 0;
+  margin: -1px;
   border: 0;
 }
 
@@ -206,8 +207,8 @@ main {
 
 .left__arrow {
   position: absolute;
-  top: 354px;
-  left: 84px;
+  top: 283px;
+  left: 40px;
   cursor: pointer;
 }
 
@@ -217,8 +218,8 @@ main {
 
 .right__arrow {
   position: absolute;
-  top: 354px;
-  right: 84px;
+  top: 283px;
+  right: 40px;
   transform: rotate(180deg);
   cursor: pointer;  
 }
@@ -295,7 +296,6 @@ main {
   text-align: justify;
   margin-top: 9px;
   text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .layout-3-column {
@@ -309,6 +309,7 @@ main {
   margin-right: 6px;
   width: 313px;
   height: 123px;
+  overflow: hidden;
 }
 
 .advantages__content {
@@ -366,6 +367,12 @@ main {
   font-family: "Lato";
   font-weight: 400;
   margin-right: 6px;
+}
+
+.tag:hover {
+  border: 1px solid #c5c5c5;
+  color: #c5c5c5;
+  cursor: pointer; 
 }
 
 

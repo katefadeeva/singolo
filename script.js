@@ -1,4 +1,3 @@
-let counter = 0;
 
 // Header
 const infoLogger = (event) => {
@@ -75,20 +74,47 @@ document.querySelector('.div_horizontal').addEventListener('click', phoneClickHo
 document.querySelector('.horizontal').addEventListener('click', phoneClickHorizontal);
 
 // Slider
-const intervalLeft = (event) => {
-  let interval = setInterval(function () {
-    document.querySelectorAll('.item').forEach((item) => {
-      if (item.style.left === '-1020px') {
-        clearInterval(interval);
-        return;
-      }
-      counter -= 5;
-      item.style.left = `${counter}px`;
-    })
-  },10);
-}
 
-document.querySelector('.left__arrow').addEventListener('click', intervalLeft);
+let counter = 0;
+
+const intervalLeft = (event) => {
+    let interval = setInterval(function () {
+      document.querySelectorAll('.item').forEach((item) => {
+        if (item.style.left === '-1020px') {
+          clearInterval(interval);
+          let prnt = item.parentNode;
+          prnt.insertBefore(document.querySelectorAll('.item')[0], prnt.childNodes.lastChild);
+          document.querySelectorAll('.item').forEach((item) => item.style.left = '0px' );
+          counter = 0;
+          return;
+        }
+        counter -= 5;
+        item.style.left = `${counter}px`;
+      })
+    },5);
+  }
+  
+  document.querySelector('.left__arrow').addEventListener('click', intervalLeft);
+  
+  const intervalRight = (event) => {
+    let counter = -1020;
+    let prnt = document.querySelector('.item-container');
+    prnt.insertBefore(document.querySelectorAll('.item')[1], document.querySelectorAll('.item')[0]);
+    document.querySelectorAll('.item').forEach((item) => item.style.left = '-1020px' );
+    let interval = setInterval(function () {
+      document.querySelectorAll('.item').forEach((item) => {
+        if (counter === 0) {
+          clearInterval(interval);
+          document.querySelectorAll('.item').forEach((item) => item.style.left = '0px' );
+          return;
+        }
+        counter += 5;
+        item.style.left = `${counter}px`;
+      })
+    },3);
+  }
+  
+  document.querySelector('.right__arrow').addEventListener('click', intervalRight);
 
 // Tag
 const tagSelector = (event) => {
@@ -99,14 +125,13 @@ const tagSelector = (event) => {
   let temp = parent.removeChild(document.getElementsByClassName('portfolio_image')[0]);
   parent.appendChild(temp);
   document.getElementsByClassName('portfolio_image')[0] = null;
-  let arr = [...document.getElementsByClassName('portfolio_image')];
-  console.log(Array.isArray(arr));
-  arr.sort(() => {Math.random()-0.5});
+  
   document.querySelectorAll('button').forEach(img => img.classList.remove('tag-first'));
   event.target.closest('button').classList.add('tag-first');
 }
 
-document.querySelector('.portfolio-tag').addEventListener('click', tagSelector);
+let tags =  document.querySelectorAll('.tag');
+tags.forEach((tag) => tag.addEventListener('click', tagSelector));
 
 // Image
 
