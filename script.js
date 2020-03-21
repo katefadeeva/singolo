@@ -8,6 +8,16 @@ const infoLogger = (event) => {
 
 document.querySelector('.navigation').addEventListener('click', infoLogger);
 
+const scrollDocument = () => {
+  let arr = document.getElementsByClassName('link.childNodes');
+  if (0 <= window.pageYOffset < 483) {
+    arr[0].classList.add('item-link');
+    // arr.forEach(a => a.classList.remove('item-link'));
+  }
+}
+
+window.addEventListener('scroll', scrollDocument);
+
 // Phone
 const phoneClickVertical = (event) => {
   let phoneVisibility = document.getElementsByClassName('vertical').item(0);
