@@ -9,14 +9,45 @@ const infoLogger = (event) => {
 document.querySelector('.navigation').addEventListener('click', infoLogger);
 
 const scrollDocument = () => {
-  let arr = document.getElementsByClassName('link.childNodes');
-  if (0 <= window.pageYOffset < 483) {
+  let arr = document.querySelectorAll('.link>a');
+  if (0 <= window.pageYOffset && window.pageYOffset < 483) {
+    arr.forEach(a => a.classList.remove('item-link'));
     arr[0].classList.add('item-link');
-    // arr.forEach(a => a.classList.remove('item-link'));
+  } 
+  if (483 <= window.pageYOffset && window.pageYOffset < 941) {
+    arr.forEach(a => a.classList.remove('item-link'));
+    arr[1].classList.add('item-link');
+  }
+  if (941 <= window.pageYOffset && window.pageYOffset < 1801) {
+    arr.forEach(a => a.classList.remove('item-link'));
+    arr[2].classList.add('item-link');
+  }
+  if (1801 <= window.pageYOffset && window.pageYOffset < 2516) {
+    arr.forEach(a => a.classList.remove('item-link'));
+    arr[3].classList.add('item-link');
+  }
+  if (2516 <= window.pageYOffset && window.pageYOffset) {
+    arr.forEach(a => a.classList.remove('item-link'));
+    arr[4].classList.add('item-link');
   }
 }
 
 window.addEventListener('scroll', scrollDocument);
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
 // Phone
 const phoneClickVertical = (event) => {
@@ -28,7 +59,8 @@ const phoneClickVertical = (event) => {
   }
 }
 
-document.querySelector('.iphone__vertical').addEventListener('click', phoneClickVertical);
+document.querySelector('.div_vertical').addEventListener('click', phoneClickVertical);
+document.querySelector('.vertical').addEventListener('click', phoneClickVertical);
 
 const phoneClickHorizontal = (event) => {
   let phoneVisibility = document.getElementsByClassName('horizontal').item(0);
@@ -39,7 +71,8 @@ const phoneClickHorizontal = (event) => {
   }
 }
 
-document.querySelector('.iphone__horizontal').addEventListener('click', phoneClickHorizontal);
+document.querySelector('.div_horizontal').addEventListener('click', phoneClickHorizontal);
+document.querySelector('.horizontal').addEventListener('click', phoneClickHorizontal);
 
 // Slider
 const intervalLeft = (event) => {
@@ -60,17 +93,6 @@ document.querySelector('.left__arrow').addEventListener('click', intervalLeft);
 
 
 
-// let interval = setInterval(function () {
-//   document.querySelectorAll('.item').forEach((item) => {
-//     if (item.style.left === '0x') {
-//       clearInterval(interval);
-//       return;
-//     }
-//     counter += 15;
-//     item.style.left = `${counter}px`;
-//   })
-// },10);
-
 // Tag
 const tagSelector = (event) => {
   console.log(document.getElementsByClassName('portfolio_image'))
@@ -79,16 +101,12 @@ const tagSelector = (event) => {
   let parent = document.getElementsByClassName('portfolio_image')[0].parentNode;
   let temp = parent.removeChild(document.getElementsByClassName('portfolio_image')[0]);
   parent.appendChild(temp);
-  // temp = document.getElementsByClassName('portfolio_image')[0];
   document.getElementsByClassName('portfolio_image')[0] = null;
-  // document.getElementsByClassName('portfolio_image')[1] = temp;
   let arr = [...document.getElementsByClassName('portfolio_image')];
   console.log(Array.isArray(arr));
   arr.sort(() => {Math.random()-0.5});
   document.querySelectorAll('button').forEach(img => img.classList.remove('tag-first'));
   event.target.closest('button').classList.add('tag-first');
-  
-  // console.log(array.sort(() => {Math.random()-0.5}));  
 }
 
 document.querySelector('.portfolio-tag').addEventListener('click', tagSelector);

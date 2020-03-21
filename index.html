@@ -9,11 +9,10 @@
 <body>
     <header class="header">
         <div class="navbar">
-            <a href="#">
-            <h1>Singolo<span>*</span></h1></a>
+            <a href="#"><h1>Singolo<span>*</span></h1></a>
             <nav class="header__nav">
                 <ul class="navigation">
-                    <li class="link"><a href="#">Home</a></li>
+                    <li class="link"><a class="item-link" href="#home">Home</a></li>
                     <li class="link"><a href="#services">Services</a></li>
                     <li class="link"><a href="#portfolio">Portfolio</a></li>
                     <li class="link"><a href="#about">About</a></li>
@@ -22,25 +21,27 @@
             </nav>
         </div>
     </header>
-    <hr class="nav_hr">
+    <hr class="nav_hr" id="home">
     <main>
         <section class="main-slider">
             <div class="item-container">
-                <div class="item active">
+                <div class="item slide1">
                     <div class="iphone__vertical">
                         <img src="assets/Yellow_phone.png">
                     </div>
+                    <div class="div_vertical"></div>
                     <div class= "screen">
                         <div class="vertical"></div>
                     </div>
                     <div class="iphone__horizontal">
                         <img src="assets/Blue_phone.png">
                     </div>
+                    <div class="div_horizontal"></div>
                     <div class= "screen">
                         <div class="horizontal"></div>
                     </div>
                 </div>
-                <div class="item">
+                <div class="item slide2">
                     <div class="slider__img">
                         <img src="assets/Slide-2.png">
                     </div>
@@ -135,7 +136,6 @@
             </div>
             
         </section>
-        <hr class="content">
         <section id="portfolio" class="portfolio">
             <div class="portfolio_block">
                 <div class="portfolio_container">
@@ -209,7 +209,6 @@
               </div>
             </div>
           </section>
-          <hr class="content">
           <section id="contact" class="contacts">
             <div class="contacts_block">
               <h2 class="contacts__name">Get a Quote</h2>

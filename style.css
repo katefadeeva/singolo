@@ -40,6 +40,7 @@ body {
   margin: 0;
   position: fixed;
   width: 1020px;
+  z-index: 1;
 }
 
 .navbar {
@@ -129,10 +130,16 @@ main {
   overflow: hidden;
 }
 
+.item-container {
+  display: flex;
+}
+
 .item {
   flex-shrink: 0;
   position: relative;
   left: 0;
+  width: 1020px;
+  height: 595px;
 }
 
 .bg-bottom {
@@ -143,7 +150,7 @@ main {
   border: 0;
 }
 
-.item:first-child {
+.slide1 {
   width: 1020px;
   height: 595px;
   background-color: #f06c64;
@@ -154,6 +161,14 @@ main {
   top: -17px;
   left: 110px;
 }
+.div_vertical {
+  position: absolute;
+  width: 216px;
+  height: 458px;
+  top: 53px;
+  left: 112px;
+  border-radius: 7%;
+}
 
 .screen .vertical {
   width: 188px;
@@ -163,6 +178,15 @@ main {
   top: 118px;
   left: 126px;
   visibility: hidden;
+}
+
+.div_horizontal {
+  position: absolute;
+  width: 458px;
+  height: 216px;
+  top: 173px;
+  right: 137px;
+  border-radius: 7%;
 }
 
 .screen .horizontal {
@@ -181,15 +205,11 @@ main {
   right: 80px;
 }
 
-.item:last-child {
-  width: 1020px;
-  height: 595px;
-}
-
 .left__arrow {
   position: absolute;
-  top: 278px;
-  left: 42px;
+  top: 354px;
+  left: 84px;
+  cursor: pointer;
 }
 
 .left__arrow:hover {
@@ -198,9 +218,10 @@ main {
 
 .right__arrow {
   position: absolute;
-  top: 279px;
-  right: 40px;
-  transform: rotate(180deg);    
+  top: 354px;
+  right: 84px;
+  transform: rotate(180deg);
+  cursor: pointer;  
 }
 
 .hidden {
@@ -224,7 +245,7 @@ main {
 
 .our-services {
   width: 940px;
-  height: 434px;
+  height: 580px;
   margin: 0 auto;
 }
 
@@ -299,25 +320,19 @@ main {
   fill: black;
 }
 
-.content {
-  width: 1020px;
-  height: 6px;
-  background-color: #ffffff;
-  margin: 0;
-  border: 0;
-}
-
 /* Portfolio */
 
 .portfolio  {
   width: 1020px;
   height: 863px;
   background-color: #2d303a;
+  border-top: 6px #ffffff solid;
 }
 
 .portfolio_block {
   width: 940px;
   margin: 0 auto;
+  padding-top: 20px;
 
 }
 
@@ -390,7 +405,7 @@ main {
 
 .about-us {
     width: 940px;
-    height: 667px;
+    height: 786px;
     margin: 0 auto;
 }
   
@@ -473,6 +488,7 @@ main {
   height: 648px;
   background-color: #f06c64;
   margin-top: 0px;
+  border-top: 6px #ffffff solid;
 }
 
 .contacts_block {
@@ -647,6 +663,15 @@ textarea {
 .footer_block .social-icons {
   margin-top: -6px;
   margin-right: -7px;
+}
+
+#services:before,
+#portfolio:before,
+#about:before {
+	display: block;
+	content: "";
+	height: 85px;
+	margin: -85px 0 0;
 }
 
 
