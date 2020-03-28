@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <title>Singolo.</title>
 </head>
 <body>
     <header class="header">
-        <div class="navbar">
-            <a href="#"><h1>Singolo<span>*</span></h1></a>
-            <nav class="header__nav">
-                <ul class="navigation">
-                    <li class="link"><a class="item-link" href="#home">Home</a></li>
-                    <li class="link"><a href="#services">Services</a></li>
-                    <li class="link"><a href="#portfolio">Portfolio</a></li>
-                    <li class="link"><a href="#about">About</a></li>
-                    <li class="link"><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="wrapper">
+            <div class="navbar">
+                <a href="#"><h1>Singolo<span>*</span></h1></a>
+                <nav class="header__nav">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                    <ul class="navigation">
+                        <li class="link"><a class="menu__item item-link" href="#home">Home</a></li>
+                        <li class="link"><a class="menu__item" href="#services">Services</a></li>
+                        <li class="link"><a href="#portfolio">Portfolio</a></li>
+                        <li class="link"><a href="#about">About</a></li>
+                        <li class="link"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <hr class="nav_hr" id="home">
     <main>
         <section class="main-slider">
-            <div class="item-container">
+            <div class="wrapper item-container">
                 <div class="item slide1">
-                    <div class="iphone__vertical">
-                        <img src="assets/Yellow_phone.png">
+                    <div class="slide__img">
+                        <img src="assets/Slider.png">
                     </div>
                     <div class="div_vertical"></div>
                     <div class= "screen">
                         <div class="vertical"></div>
-                    </div>
-                    <div class="iphone__horizontal">
-                        <img src="assets/Blue_phone.png">
                     </div>
                     <div class="div_horizontal"></div>
                     <div class= "screen">
@@ -42,7 +46,7 @@
                     </div>
                 </div>
                 <div class="item slide2">
-                    <div class="slider__img">
+                    <div class="slide__img">
                         <img src="assets/Slide-2.png">
                     </div>
                 </div>
@@ -72,9 +76,8 @@
                 <svg class="hidden" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="27" viewBox="0 0 16 27"><g><g><image width="16" height="27" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAYAAAB1NA+iAAABm0lEQVQ4T42USytFURiGnYkUJsptYOQappQyM1BMXEoGcosx5TYwFXItAwMp5RIGcg9J5weY+hHGSimXPC/7aFt9a++96umc873re846a5+1Ulm/YyQgm9cTWICvIIt8SZF2wKkza5fPA0kFO0wcNCavUpuMk2gFM7DombgU5F6PBAVwBU2eWfPUZ30GCTSK4QHqPBMnqK9ZWUagrByuodoj0X5oX/6NsEBBBVxCjUcySn07nLkCZfVwDyWG5J3aEBxkMkugrCFYifbGHZ8U+uBIgU+grBEuwJK8Uu+GuyiBJC1wBnnGSl6odcYJ1NcO+rcWGpKnJAL1rcO4IXhLIuilUY8u1xA8xgm0/GNP8zP1tiiBmg8h37OBugbSPkEz4U3E7vfoEUpsCaKev/6JXaDT+zNcgZr13EuNZat5GPbDWVhQSaAjXWY0fwTNe26WEegU6ihXGc0qjcGGlUlQBGmo9TSb90B4D3RdzXmap6kve7K/TdzinS4Kd8ReqGrQT2iFW6d7hc9TUd8c/gl6r7PdDzlwDptJmjXnG++TPyPGutWiAAAAAElFTkSuQmCC"/></g></g></svg>
             </div>
         </section>
-        <hr class="bg-bottom">
         <section id= "services" class="our-services">
-            <div class="our-services_block">
+            <div class="wrapper our-services_block">
                 <h2 class="our-services__name">Our Services</h2>
                 <p class="our-services__description">Fusce dapibus, tellus ac cursus com-modo, tortor mauris condimentum. Duis mollis, non commodo luctus nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimenturn nibh.</p>
                 <div class="layout-3-column">
@@ -137,7 +140,7 @@
             
         </section>
         <section id="portfolio" class="portfolio">
-            <div class="portfolio_block">
+            <div class="wrapper portfolio_block">
                 <div class="portfolio_container">
                     <h2 class="portfolio__name">Portfolio</h2>
                     <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -164,9 +167,8 @@
                 </div>
             </div>
         </section>
-        <hr class="bottom-portfolio">
         <section id="about" class="about-us">
-            <div class="about-us_block">
+            <div class="wrapper about-us_block">
               <h2 class="about-us__name">About Us</h2>
               <p class="about-us__description"> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
               <div class="layout-3-column-about-us">
@@ -210,7 +212,7 @@
             </div>
           </section>
           <section id="contact" class="contacts">
-            <div class="contacts_block">
+            <div class="wrapper contacts_block">
               <h2 class="contacts__name">Get a Quote</h2>
               <p class="contacts__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
               <div  class="contact_form">
@@ -221,7 +223,7 @@
                             <input type="email" name="email" class="form-element" placeholder="Email (Required)" value="" required/>
                             <input type="text" name="subject" id="subject" class="form-element" placeholder="Subject" value=""/>
                             <textarea name="message" id="description" class="form-element last-element-form" placeholder="Describe your project in detail..." value=""></textarea>
-                            <input type="submit" class="form-element submit" value="Send">
+                            <input type="submit" class="form-element submit" value="SEND">
                         </div>
                       </form>
                 </div>
@@ -245,9 +247,8 @@
                 </div>
               </div>
           </section>
-          <hr class="bg-bottom">
           <footer class="footer">
-            <div class="footer_block">
+            <div class="wrapper footer_block">
               <span class="footer__copyright">&copy; Copyright 2013</span>
               <div class="social-icons">
                 <a href="#"><img src="assets/icon/icon-facebook.svg" alt="icon-facebook" class="icon"></a>
