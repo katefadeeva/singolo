@@ -3,7 +3,7 @@
 @media screen and (max-width : 1019px) {
    .wrapper,
    .main-slider,
-   .item {
+   .item{
        width: 100%;
    }
 
@@ -27,9 +27,10 @@
    .about-us__name,
    .about-us__description,
    .contacts__name,
+   .layout-3-column-about-us,
    .contacts__description,
    .contact_form {
-      padding: 0 40px 0 40px;
+      padding: 0 40px;
    }
 
    .layout-3-column {
@@ -38,6 +39,7 @@
 
    .portfolio-images {
       grid-template-columns: repeat(3,auto);
+      padding-bottom: 65px;
    }
 
    .contacts_block {
@@ -73,10 +75,11 @@
 
    .footer__copyright {
       padding-left: 41px;
-   }
+   } 
 
    .footer_block .social-icons {
       padding-right: 40px;
+      margin-right: 0;
    }
 }
 
@@ -87,10 +90,13 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
+   h1 {
+      margin-left: 27%;
+   }
+   
    .navbar {
       display: block;
       padding-top: 40px;
-      text-align: center;
       padding-left: 65px;
    }
 
@@ -138,7 +144,7 @@
       width: 278px;
       height: 100%;
       margin: 0;
-      padding: 80px 0;
+      padding: 150px 0;
       list-style: none;
       background-color: #2D303A;
       box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
@@ -158,6 +164,7 @@
       height: 25px;
    }
 
+ 
    #menu__toggle:checked ~ .menu__btn > span,
    #menu__toggle:checked ~ .menu__btn > span::before,
    #menu__toggle:checked ~ .menu__btn > span::after {
@@ -182,6 +189,22 @@
       left: 0;
    }
 
+   #menu__toggle:checked ~ .navbar > a {
+      display: block;
+      position: absolute;
+      z-index: 5;
+   }
+
+   .left__arrow {
+      left: 10px;
+      top: 93px;
+   }
+
+   .right__arrow {
+      right: 10px;
+      top: 93px;
+   }
+
    .our-services__name,
    .our-services__description,
    .layout-3-column,
@@ -192,9 +215,10 @@
    .about-us__name,
    .about-us__description,
    .contacts__name,
+   .layout-3-column-about-us,
    .contacts__description,
    .contact_form {
-      padding: 0 30px 0 30px;
+      padding: 0 30px;
    }
 
    .layout-3-column {
@@ -203,7 +227,31 @@
 
    .portfolio-images {
       grid-template-columns: repeat(2,auto);
+      padding-bottom: 42px;
+      grid-column-gap: 14px;
    }
+
+   .portfolio_image {
+      margin-right: 14px;
+      margin-top: 14px;
+  }
+
+   .portfolio-tag {
+      margin-bottom: 10px;
+   }
+
+   .tag {
+      margin-right: 0px;
+   }
+
+   .layout-3-column-about-us {
+      grid-template-columns: repeat(1,auto);
+      margin-bottom: 10px;
+   }
+
+   .about-us__employee {
+      padding-bottom: 34px;
+   }   
 
    .contact_form {
       display: block;
@@ -244,5 +292,7 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 374px) {
-
+   .advantages {
+      height: 144px;
+   }
 }

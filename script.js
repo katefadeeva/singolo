@@ -3,9 +3,21 @@
 const infoLogger = (event) => {
   document.querySelectorAll('a').forEach(a => a.classList.remove('item-link'));
   event.target.closest('a').classList.add('item-link');
+  document.getElementById('menu__toggle').checked = false;
+  document.querySelector('body').style.background = '';
+  document.querySelector('main').style.opacity = '';
+  document.querySelector('body').style.overflow = '';
 }
 
 document.querySelector('.navigation').addEventListener('click', infoLogger);
+
+const menuHandler = (event) => {
+  document.querySelector('body').style.overflow = 'hidden';
+  document.querySelector('body').style.background = '#2D303A';
+  document.querySelector('main').style.opacity = '0.6'
+}
+
+document.querySelector('#menu__toggle').addEventListener('click', menuHandler);
 
 const scrollDocument = () => {
   let arr = document.querySelectorAll('.link>a');
@@ -147,11 +159,27 @@ document.querySelector("#form").addEventListener("submit", function(e){
   e.preventDefault();
   if (document.querySelector("#subject").value && document.querySelector("#description").value) {
     alert(`Subject: ${document.querySelector("#subject").value} \n Description: ${document.querySelector("#description").value}`);
+    document.querySelector("#subject").value = '';
+    document.querySelector("#description").value = '';
+    document.querySelector("#name").value = '';
+    document.querySelector("#email").value = '';
   } else if (!document.querySelector("#subject").value && document.querySelector("#description").value) {
     alert(`Without subject \n Description: ${document.querySelector("#description").value}`);
+    document.querySelector("#subject").value = '';
+    document.querySelector("#description").value = '';
+    document.querySelector("#name").value = '';
+    document.querySelector("#email").value = '';
   } else if (!document.querySelector("#description").value && document.querySelector("#subject").value) {
     alert(`Subject: ${document.querySelector("#subject").value} \n Without description`);
+    document.querySelector("#subject").value = '';
+    document.querySelector("#description").value = '';
+    document.querySelector("#name").value = '';
+    document.querySelector("#email").value = '';
   } else {
     alert(`Without subject \n Without description`);
+    document.querySelector("#subject").value = '';
+    document.querySelector("#description").value = '';
+    document.querySelector("#name").value = '';
+    document.querySelector("#email").value = '';
   }
 });

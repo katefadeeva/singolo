@@ -33,8 +33,11 @@ body {
 }
 
 main {
-  background-color: #f2f2f2;;
+  background-color: #f2f2f2;
+  margin-top: 83px;
+  width: 100%;
 }
+
 /* Header */
 
 .header {
@@ -45,7 +48,7 @@ main {
   width: 100%;
   z-index: 1;
   border-bottom: 6px #323746 solid;
-  margin-top: -8px;
+  margin-top: -9px;
 }
 
 .wrapper {
@@ -125,19 +128,14 @@ h1, li {
   color: #f06c64;
 }
 
-main {
-  margin-top: 83px;
-  width: 100%;
-}
-
 /* Slider */
 
 .main-slider {
   display: flex;
   overflow: hidden;
   position: relative;
-  width: 1020px;
   margin: 0 auto;
+  width: 1020px;
 }
 
 .slide__img img {
@@ -197,6 +195,7 @@ main {
   top: 283px;
   left: 40px;
   cursor: pointer;
+  transform: rotate(0deg);
 }
 
 .left__arrow:hover {
@@ -224,11 +223,10 @@ main {
   display: none;
 }
 
-/* Our Services */
-
 .our-services_block {
   margin-top: 61px;
   width: 940px;
+  padding-bottom: 20px;
 }
 
 .our-services__name {
@@ -264,7 +262,6 @@ main {
 
 .advantages__content p {
   font-family: "Lato";
-  width: 219px;
   height: 65px;
   font-size: 0.75rem;
   line-height: 22px;
@@ -283,7 +280,6 @@ main {
 .advantages {
   display: flex;
   margin-right: 6px;
-  width: 313px;
   height: 123px;
   overflow: hidden;
 }
@@ -301,14 +297,15 @@ main {
 .portfolio  {
   width: 100%;
   background-color: #2d303a;
-  border-top: 6px #ffffff solid;
+  margin-top: -89px;
+  border-top: 85px solid #f2f2f2;
   border-bottom: 6px #323746 solid;
 }
 
 .portfolio_block {
   width: 940px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 59px;
 
 }
 
@@ -323,7 +320,6 @@ main {
 
 .portfolio__description {
   font-family: "LatoLight";
-  width: 940px;
   line-height: 29px;
   color: #767e9e;
   text-align: justify;
@@ -361,7 +357,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4,auto);
   padding-bottom: 65px;
-
+  grid-column-gap: 20px;
 }
 
 .portfolio-images img {
@@ -380,11 +376,11 @@ main {
     margin-top: 19px;
 }
 
-
 /* About us */
 
 .about-us {
     margin: 0 auto;
+    border-bottom: 6px #ffffff solid;
 }
   
 .about-us_block {
@@ -427,8 +423,7 @@ main {
   
 .about-us__employee-description {
     font-family: "Lato";
-    width: 300px;
-    height: 53px;
+    padding-bottom: 10px;
     font-size: 12px;
     line-height: 21px;
     color: #767e9e;
@@ -439,14 +434,15 @@ main {
   
 .layout-3-column-about-us {
     display: grid;
-    grid-template-columns: repeat(3,320px);
+    grid-template-columns: repeat(3,auto);
     margin-top: 46px;
-    margin-bottom: 68px;
+    margin-bottom: 62px;
+    grid-column-gap: 20px;
 }
-  
-.about-us__employee {
-    margin-right: 6px;
-  }
+
+.about-us__employee-photo {
+  width: 100%;
+}
 
 /* Social icon */
 
@@ -464,8 +460,8 @@ main {
 .contacts {
   width: 100%;
   background-color: #f06c64;
-  margin-top: 0px;
-  border-top: 6px #ffffff solid;
+  margin-top: -73px;
+  border-top: 50px solid #f2f2f2;
   border-bottom: 6px #323746 solid;
 }
 
@@ -544,10 +540,6 @@ textarea {
   justify-content: space-between;
   margin-bottom: 58px;
 }
-
-/* .contact_info {
-  width: 300px;
-} */
 
 .contact_info-name {
   font-family: "LatoBlack";
@@ -645,10 +637,10 @@ textarea {
 }
 
 #services:before,
-#portfolio:before,
 #about:before {
 	display: block;
 	content: "";
 	height: 85px;
-	margin: -85px 0 0;
+	margin: -85px 0 0 0;
 }
+
