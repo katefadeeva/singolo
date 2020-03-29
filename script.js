@@ -1,4 +1,3 @@
-
 // Header
 const infoLogger = (event) => {
   document.querySelectorAll('a').forEach(a => a.classList.remove('item-link'));
@@ -12,9 +11,16 @@ const infoLogger = (event) => {
 document.querySelector('.navigation').addEventListener('click', infoLogger);
 
 const menuHandler = (event) => {
-  document.querySelector('body').style.overflow = 'hidden';
-  document.querySelector('body').style.background = '#2D303A';
-  document.querySelector('main').style.opacity = '0.6'
+  if (document.getElementById('menu__toggle').checked === true) {
+    document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector('body').style.background = '#2D303A';
+    document.querySelector('main').style.opacity = '0.6';
+  }
+  if (document.getElementById('menu__toggle').checked === false) {
+    document.querySelector('body').style.overflow = 'visible';
+    document.querySelector('body').style.background = '';
+    document.querySelector('main').style.opacity = '';
+  }
 }
 
 document.querySelector('#menu__toggle').addEventListener('click', menuHandler);

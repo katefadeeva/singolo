@@ -226,7 +226,7 @@ h1, li {
 .our-services_block {
   margin-top: 61px;
   width: 940px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .our-services__name {
@@ -305,8 +305,6 @@ h1, li {
 .portfolio_block {
   width: 940px;
   margin: 0 auto;
-  padding-top: 59px;
-
 }
 
 .portfolio__name {
